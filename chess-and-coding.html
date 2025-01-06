@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Satranç Bilgi ve Öneri Sitesi - Satranç & Kodlama</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  
+  <input type="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+  <!--üst m.-->
+  <nav class="navbar">
+    <ul class="navigation">
+      <li><a href="index.html">Anasayfa</a></li>
+      <li><a href="big-masters.html">Büyük Ustalar</a></li>
+      <li><a href="piece-basics.html">Temel Taş Bilgisi</a></li>
+      <li><a href="openings.html">Açılışlar</a></li>
+      <li><a href="suggestions.html">Tavsiyeler</a></li>
+      <li><a href="chess-and-coding.html" class="active">Satranç & Kodlama</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-title">
+    <h1>Satranç & Kodlama</h1>
+  </header>
+  <!--Bu kısımları kontrol et-->
+  <main>
+    <section>
+      <h2>Bilgisayarlar, Kodlar ve At'ın L Şekli</h2>
+      <p>
+        Satrançta atın <em>(Knight)</em> 'L' şeklindeki hareketini kodlamak, 
+        bazen “Hello World” yazmaktan daha zor olabilir! Peki neden?  
+        Çünkü 8 farklı koordinat dönüşümü, if-else blokları, 
+        hatta “Dizinin dışına taşma hataları” (array index out of bounds) derken
+        kodu test ederken kafamız bir hayli karışabiliyor. 
+      </p>
+      <p>
+        Buna ek olarak, piyonun <strong>terfisi</strong> (promotion) var ki, 
+        kod geliştiricilerin “<em>Bu piyon vezire mi döndü, kale mi oldu?</em>” diye 
+        veri tabanında ekstra mantık yazması gerekiyor. 
+        Düşünsenize, bir <code>pawn</code> nesnesi, bir anda <code>queen</code> sınıfından miras alıyor! 
+        Obje yönelimli programlama (OOP) sevenler tam da bu noktada bayram edebilir.
+      </p>
+    </section>
+
+    <section>
+      <h2>Satranç Motorları ve Yapay Zeka</h2>
+      <p>
+        Günümüzde <strong>Stockfish</strong>, <strong>Leela Chess Zero</strong> gibi 
+        satranç motorları, insanüstü seviyelerde oynuyor. Milyarlarca konumu saniyeler içinde
+        hesaplayıp en iyi hamleyi bulmaya çalışıyorlar. Eğer bir kod yazarıysanız, 
+        “<em>for (int i = 0; i < infinity; i++) ...</em>” gibi mizahi bir yaklaşım 
+        sizi korkutabilir, ama satranç motorları tam da bunu yapıyor: 
+        <em>Arama ağaçları</em>, <em>alpha-beta pruning</em>, <em>derin öğrenme</em>...
+      </p>
+      <!--bknz:düşünen makineler-->
+      <p>
+        Kod yazarken “<em>Değişkenin scope’u</em>” derdi varsa, satranç motorlarında da 
+        <em>derinlik (depth)</em>, <em>dallanma faktörü (branching factor)</em> gibi 
+        konular var. Kısacası, satranç motorunun beyni de hataya düşmeye müsait; 
+        sadece bizden biraz daha az panikliyor!.
+      </p>
+    </section>
+
+    <section>
+      <h2>Kodlamanın Satranca Katkısı (ve tabiki Tersi)</h2>
+      <p>
+        Satranç ve kodlama birbirine çok şey katar. Nasıl mı?  
+        Bir satranç partisini analiz etmek, tıpkı bir algoritmanın hangi noktalarda 
+        darboğaza girdiğini bulmaya benzer. Mantıksal düşünce, kurallar dizisinin 
+        içindeki olası tüm senaryoları göz önüne almak, 
+        <em>debugging</em> becerileri...
+      </p>
+      <p>
+        Öte yandan, satrançta sürekli <em>“En iyi hamle ne?”</em> diye bakarken, 
+        kod yazarken de <em>“Bu fonksiyonun big-O’su ne, optimize edebilir miyim?”</em> 
+        diye düşünürüz. Yani, <strong>minimax algoritması</strong> bir nevi satrancın 
+        programlama dünyasına armağanıdır!
+      </p>
+    </section>
+
+    <section>
+      <h2>Komik Bir Karşılaştırma</h2>
+      <ul>
+        <li><strong>Satrançta</strong> 64 kare, <strong>Kodlamada</strong> 64-bit integer. (Tam tesadüf olmasa gerek!)</li>
+        <li><strong>Satrançta</strong> At L şeklinde gider, <strong>Kodlamada</strong> 
+            bizler de “spagetti kod” yazarak her yöne gideriz.</li>
+        <li><strong>Satrançta</strong> Piyon terfi edince “Vayy vezir oldum!” der, 
+            <strong>Kodlamada</strong> junior developer terfi edince “Ben lead developer oldum!” der.</li>
+        <li><strong>Satrançta</strong> “Rok” var, <strong>Kodlamada</strong> bazen 
+            “<em>Refactoring</em>” var - ikisi de koruma amaçlı hamleler sayılabilir!</li>
+      </ul>
+      <!--kaynak:Ankara üni. & chees.com(notasyon ve kodlama)-->
+    </section>
+
+    <section>
+      <h2>Sonuç</h2>
+      <p>
+        Satranç ve kodlama dünyası, mantık, strateji ve yaratıcılığın birleştiği ortak bir noktada buluşuyor. 
+        Birinde 8x8 tahta ve 16 taşla oynarken, diğerinde sınırsız satırlarca kod ve sayısız hata mesajıyla 
+        mücadele ediyoruz. Ama her ikisinde de <strong>öğrenme</strong>, <strong>iyileştirme</strong> 
+        ve <strong>yenilik</strong> hiç bitmiyor.
+      </p>
+      <p>
+        Bugün “<em>Satranç motoru yazayım</em>” diye yola çıkarsanız, belki yarın devrim niteliğinde 
+        bir yapay zekâ kütüphanesi geliştirirsiniz. Ya da sadece “f4” hamlesinin kodunu 
+        doğru yazmak için kahveyle sabahlarsınız! Kim bilir...
+      </p>
+      <p><em>Bütün bunlara hayran olmamak içten bile değil!</em></p> 
+    </section>
+    <!--Satranç zihninizi geliştiri vb. argümanlar bence burda yersiz kaçar-->
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Satranç Bilgi ve Öneri Sitesi</p>
+  </footer>
+</body>
+</html>

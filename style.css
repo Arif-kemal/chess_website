@@ -1,0 +1,283 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+
+  /* yazıların rengi gri olabilir.
+  */
+  body {
+    font-family: "Poppins", Arial, sans-serif;
+    color: #333;
+    background: url("resimler/chessboard-bg.png") repeat center center; 
+    line-height: 1.6;
+    position: relative;
+  }
+  
+  /*Linkler*/
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Listeler */
+  ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+  }
+  
+  /*Başlıklar*/
+  h1, h2, h3, h4 {
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  .menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 20px; 
+    color: #1c04f7;/*Ana ekran da görünmesi i.*/
+    z-index: 9999;
+  }
+  /*Konusu zor*/
+  .navbar {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    position: relative;
+  }
+  
+  .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .navigation li a {
+    color: #333;
+    font-weight: bold;
+    font-size: 1rem;
+    position: relative;
+    padding: 5px;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .navigation li a:hover {
+    color: #d4af37; /* Altın rengi */
+    transform: scale(1.05);
+  }
+  
+  .navigation li a.active {
+    color: #d4af37;
+  }
+  
+  /* =============================
+     Ana Sayfa 
+  ============================= */
+  .hero {
+    /* Arkaplan: şefaf ve resimli */
+    background: 
+      linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+      url("resimler/chess-background.jpg") no-repeat center center/cover;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero-content {
+    color: #fff;
+    max-width: 800px;
+    padding: 20px;
+  }
+  
+  .hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  /* ================================
+     SAYFA BAŞLIĞI (belki taşlar ol.)
+  =================================== */
+  .page-title {
+    /* Yarı şeffaf gradient!!! */
+    background: linear-gradient(to right, rgba(255,255,255,0.7), rgba(255,255,255,0.5));
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .page-title h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  /* Tavsiye  özel başlık (daha açık sarı ) */
+  .suggestions-title {
+    background: linear-gradient(to right, #fff8dc, rgba(255,255,224,0.6)); 
+  }
+  
+  /* =============================
+     ANA İÇERİK (düzeltmeler!)
+  ============================= */
+  main {
+    width: 85%;
+    max-width: 1000px;
+    margin: 20px auto;
+    /* Arkaplanı beyaz, yarı şeffaf! */
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    min-height: 40vh;
+  }
+  
+  /* =============================
+     BÜYÜK USTALAR
+     ============================= */
+  .grandmaster {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .grandmaster img {
+    float: left;
+    width: 130px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .grandmaster h2 {
+    margin-top: 0;
+    color: #ffdf27;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  .grandmaster blockquote {
+    font-style: italic;
+    color: #555;
+    margin: 10px 0;
+    border-left: 4px solid #d4af37;
+    padding-left: 10px;
+  }
+  
+  /* =============================
+     TEMEL TAŞ BİLGİSİ
+     ============================= */
+  .center {
+    display: block;
+    margin: 20px auto;
+    max-width: 50%;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* =============================
+     AÇILIŞLAr
+  ============================= */
+  section {
+    margin-bottom: 30px;
+  }
+  
+  section h2 {
+    margin-bottom: 10px;
+    color: #d4af37; 
+  }
+  
+  .tip {
+    background-color: rgba(212,175,55,0.1);
+    border-left: 4px solid #d4af37;
+    padding: 8px 12px;
+    margin-top: 5px;
+    color: #333;
+  }
+  
+  /* =============================
+     TAVSİYELER
+  ============================= */
+  
+  .suggestions-bg {
+    background-color: rgba(151, 154, 151, 0.764);
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  .icon {
+    width: 24px;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    color: #333;
+  }
+ /* düzenle */
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: block;
+    }
+  
+    .navigation {
+      position: absolute;
+      top: 60px;
+      left: 0; /**/
+      background-color: rgba(255,255,255,0.9);
+      flex-direction: column;
+      width: 220px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      z-index: 9999;
+    }
+  
+    .navigation li {
+      border-bottom: 1px solid #999;
+      text-align: left;
+      padding: 10px;
+    }
+  
+    #menu-toggle:checked + .menu-icon + .navbar .navigation {
+      max-height: 600px;
+    }
+  
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  
+    main {
+      width: 95%;
+    }
+  
+    .grandmaster img {
+      float: none;
+      display: block;
+      margin: 0 auto 10px;
+    }
+  }
+  

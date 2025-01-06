@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Satranç Bilgi ve Öneri Sitesi - Temel Taş Bilgisi</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!--Hamburger-->
+  <input type="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+  <!--Üst m.-->
+  <nav class="navbar">
+    <ul class="navigation">
+      <li><a href="index.html">Anasayfa</a></li>
+      <li><a href="big-masters.html">Büyük Ustalar</a></li>
+      <li><a href="piece-basics.html" class="active">Temel Taş Bilgisi</a></li>
+      <li><a href="openings.html">Açılışlar</a></li>
+      <li><a href="suggestions.html">Tavsiyeler</a></li>
+      <li><a href="chess-and-coding.html">Satranç & Kodlama</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-title">
+    <h1>Temel Taş Bilgisi</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Taşların Dizilişi</h2>
+      <p>
+        Satranç tahtası 8x8 kareden oluşur. Her oyuncu, en arkada kaleler <em>(Rook)</em>, atlar <em>(Knight)</em>, 
+        filler <em>(Bishop)</em>, vezir <em>(Queen)</em> ve şah <em>(King)</em> olacak şekilde taşlarını dizer. 
+        Önde ise 8 piyon <em>(Pawn)</em> bulunur. Beyaz'ın sağ köşesi her zaman beyaz kareyle başlar.
+      </p>
+      <img src="resimler/chess-setup.png" alt="Satranç Taş Dizilimi" class="center"/>
+    </section>
+
+    <section>
+      <h2>Taşların Hareketleri</h2>
+      <ul>
+        <li>
+          <strong>Piyon (Pawn):</strong> Yalnızca düz ilerler, ilk hamlede iki kare gidebilir, diğer hamlelerde bir kare.  
+          En son sıraya ulaştığında <em>terfi (promotion)</em> olarak vezir, kale, fil veya ata dönüşebilir.
+        </li>
+        <li><strong>At (Knight):</strong> ‘L’ şeklinde (2 yatay + 1 dikey veya 2 dikey + 1 yatay) hareket eder.</li>
+        <li><strong>Fil (Bishop):</strong> Sadece çapraz karelerde ilerler. Kendi rengi üzerinde kalır.</li>
+        <li><strong>Kale (Rook):</strong> Dikey ve yatay hatlarda sınırsız ilerleyebilir.</li>
+        <li><strong>Vezir (Queen):</strong> Hem kale hem de fil gibi hareket edebilir; en güçlü taştır.</li>
+        <li><strong>Şah (King):</strong> Her yönde yalnızca 1 kare ilerleyebilir; ayrıca rok yaparak güvenliğini artırabilir.</li>
+      </ul>
+      <p>
+        Her hamlede taşlarını gelişime dahil etmeye, merkeze hakim olmaya ve mümkünse rakip taşları tehdit etmeye odaklanman gerekir. 
+        Bu temel prensipler satranç oyununun her aşamasında önemli rol oynar.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Satranç Bilgi ve Öneri Sitesi</p>
+  </footer>
+</body>
+</html>
